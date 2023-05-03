@@ -27,7 +27,19 @@ El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar e
 * Fomenta la creativitat: El disseny i la fabricació de CatScape requereixen habilitats i coneixements tècnics, la qual cosa ens permet fomentar la nostra creativitat i ampliar els nostres coneixements en el desenvolupament d'un robot apte per a mascotes.
 
 ## Esquema maquinari
+3x Sensors de distància/ultrasò.
+2x Rodes per moure el robot.
+1x Raspberry pi zero.
+1x Sensor capacitiu.
+1x Controlador de motors.
+1x Servomotor per la comporta del pinso.
+1x Porta piles amb 6 piles.
+1x Càmera 8 MB Raspberry PI.
+2x Motor micro metall.
+1x Roda de transferència.
+1x Placa de proves. 
 
+![Esquema HW] (
 ## Peces 3D
 
 ## Arquitectura Software
