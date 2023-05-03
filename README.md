@@ -3,12 +3,12 @@ Robot autònom amb 3 rodes que amb 3 sensors de proximitat i una càmera és cap
 ## taula de continguts
 * [Descripció](#Descripció)
 * [Requeriments](#Requeriments)
-* [Contribucions sorprenents](#Contribucions sorprenents)
-* [Esquema maquinari](#Esquema maquinari)
-* [Peces 3D](#Peces 3D)
-* [Arquitectura Programari](#Arquitectura Programari)
+* [Contribucions sorprenents](#Contribucions_sorprenents)
+* [Esquema maquinari](#Esquema_maquinari)
+* [Peces 3D](#Peces_3D)
+* [Arquitectura Programari](#Arquitectura_Programari)
 * [Algorismes](#Algorismes)
-* [Experiments realitzats](#Experiments realitzats)
+* [Experiments realitzats](#Experiments_realitzats)
 * [Autors](#Autors)
 
 ## Requeriments
