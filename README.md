@@ -39,7 +39,7 @@ El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar e
 1x Roda de transferència.
 1x Placa de proves. 
 
-![Esquema HW] (
+![Esquema HW] (CatEscape/img/HW.png)
 ## Peces 3D
 
 ## Arquitectura Software
