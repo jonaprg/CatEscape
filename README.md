@@ -1,4 +1,4 @@
-# CatScape
+# CatEscape
 Robot autònom amb 3 rodes que amb 3 sensors de proximitat i una càmera és capaç de detectar un gat i allunyar-se'n sense xocar-se amb els obstacles
 ## taula de continguts
 * [Descripció](#Descripció)
