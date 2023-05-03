@@ -12,6 +12,9 @@ Robot autònom amb 3 rodes que amb 3 sensors de proximitat i una càmera és cap
 * [Autors](#Autors)
 
 ## Descripció
+La joguina per gats CatEscape buscarà gats a la teva casa per tal de poder entretenir-los mitjançant una càmara i un algoritme de visió per computador. Quan detecti al gat començarà a escspar i a traves d'un plomissol cridarem la seva atenció. Quan consideri que el gat ha tocat el bot un número de vegades suficients o si ha seguit el robot un temps suficient, aquest deixarà anar pinso per tal de premiar al gat
+
+El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar els obstacles que trobi en el seu camí, i amb les rodes podrà girar sense cap problema cap a qualsevol direcció.
 
 ## Requeriments
 
