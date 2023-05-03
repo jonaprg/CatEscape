@@ -49,6 +49,10 @@ El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar e
 ## Experiments realitzats
 
 ## Autors
+* Jose Antonio Ramos Andrades
+* Jonathan Rojas Granda
+* Roger López Puigbò
+* Mohamed El Harrak Aeuil
 
 
 
