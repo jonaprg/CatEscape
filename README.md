@@ -11,9 +11,9 @@ Robot autònom amb 3 rodes que amb 3 sensors de proximitat i una càmera és cap
 * [Experiments realitzats](#Experiments_realitzats)
 * [Autors](#Autors)
 
-## Requeriments
-
 ## Descripció
+
+## Requeriments
 
 ## Contribucions sorprenents
 
