@@ -43,7 +43,7 @@ El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar e
 ## Peces 3D
 
 ## Arquitectura Software
-
+![Esquema SW](img/SW.PNG)
 ## Algorismes
 
 ## Experiments realitzats
