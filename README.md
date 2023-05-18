@@ -45,6 +45,9 @@ El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar e
 
 ## Arquitectura Software
 ![Esquema SW](img/SW.PNG)
+### Mòduls de Software
+![Esquema ModulSoftware](img/DiagramaSoftwareModules.png)
+
 ## Algorismes
 
 ## Experiments realitzats
