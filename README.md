@@ -42,7 +42,8 @@ El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar e
 
 ![Esquema HW](img/HW.PNG)
 ## Peces 3D
-
+![Base de fusta tallada a laser]
+![Part superior de fusta tallada a laser]
 ## Arquitectura Software
 ![Esquema SW](img/SW.PNG)
 ### Mòduls de Software
