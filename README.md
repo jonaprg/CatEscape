@@ -44,6 +44,9 @@ El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar e
 ## Peces 3D
 ![Base de fusta tallada a laser]
 ![Part superior de fusta tallada a laser]
+![Suport sensors d'ultra sò]
+![Suport switch bateries]
+![Encaix connector Raspberry PI]
 ## Arquitectura Software
 ![Esquema SW](img/SW.PNG)
 ### Mòduls de Software
