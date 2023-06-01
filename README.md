@@ -17,12 +17,8 @@ La joguina per gats CatEscape buscarà gats a la teva casa per tal de poder entr
 El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar els obstacles que trobi en el seu camí, i amb les rodes podrà girar sense cap problema cap a qualsevol direcció.
 
 ## Requeriments
-* Servo.h
-* python3
-* NewPing.h
-* Wire.h
-* opencv2
-* 
+* [Python3.11.x](https://www.python.org)
+* [Opencv](https://opencv.org/) 
 ## Contribucions sorprenents
 * Proporciona entreteniment i activitat física: Els gats són animals actius per naturalesa i necessiten estimulació i exercici per mantenir-se sans i feliços.        CatEscape proporciona una forma divertida i emocionant per als gats de jugar i mantenir-se actius, la qual cosa pot millorar el seu benestar general.
 * Fomenta la interacció entre propietari i mascota: Jugar amb els gats és una excel·lent manera de desenvolupar i reforçar el llaç entre el propietari i la mascota. CatEscape pot ser una eina per ajudar els propietaris a interactuar amb els seus gats i gaudir de moments divertits junts.
