@@ -43,15 +43,16 @@ El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar e
 ![Esquema HW](img/HW.PNG)
 ## Peces 3D
 * Base de fusta tallada amb fresadora CNC
-<img name="Base de fusta tallada amb fresadora CNC" src="https://github.com/jonaprg/CatEscape/blob/master/img/parte_abajo_madera.PNG" width="100" height="100">
+<img name="Base de fusta tallada amb fresadora CNC" src="https://github.com/jonaprg/CatEscape/blob/master/img/parte_abajo_madera.PNG" width="250" height="250">
 * Part superior de fusta tallada amb fresadora CNC
-![Part superior de fusta tallada amb fresadora CNC](img/parte_arriba_madera.PNG)
+<img name="Part superior de fusta tallada amb fresadora CNC" src="https://github.com/jonaprg/CatEscape/blob/master/img/parte_arriba_madera.PNG" width="250" height="250">
 * Suport sensors d'ultra sò
-![Suport sensors d'ultra sò](img/soporte_ultras.jpeg)
+<img name="Suport sensors d'ultra sò" src="https://github.com/jonaprg/CatEscape/blob/master/img/soporte_ultras.jpeg" width="250" height="250">
 * Suport switch bateries
-![Suport switch bateries](img/soporte_switch.jpeg)
+<img name="Suport switch bateries" src="https://github.com/jonaprg/CatEscape/blob/master/img/soporte_switch.jpeg" width="250" height="300">
 * Encaix connector Raspberry PI
-![Encaix connector Raspberry PI](img/soporte_cable_raspi.jpeg)
+<img name="Encaix connector Raspberry PI" src="https://github.com/jonaprg/CatEscape/blob/master/img/soporte_cable_raspi.jpeg" width="300" height="250">
+
 ## Arquitectura Software
 ![Esquema SW](img/SW.PNG)
 ### Mòduls de Software
