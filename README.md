@@ -43,7 +43,7 @@ El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar e
 ![Esquema HW](img/HW.PNG)
 ## Peces 3D
 * Base de fusta tallada amb fresadora CNC
-![Base de fusta tallada amb fresadora CNC](img/parte_abajo_madera.PNG = 10x10)
+<img name="Base de fusta tallada amb fresadora CNC" src="https://github.com/jonaprg/CatEscape/blob/master/img/parte_abajo_madera.PNG" width="100" height="100">
 * Part superior de fusta tallada amb fresadora CNC
 ![Part superior de fusta tallada amb fresadora CNC](img/parte_arriba_madera.PNG)
 * Suport sensors d'ultra sò
