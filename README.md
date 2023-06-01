@@ -42,9 +42,9 @@ El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar e
 
 ![Esquema HW](img/HW.PNG)
 ## Peces 3D
-![Base de fusta tallada amb fresadora CNC](img/parte_abajo_madera.png)
-![Part superior de fusta tallada amb fresadora CNC](img/parte_arriba_madera.png)
-![Suport sensors d'ultra sò](img/soporte_utras.jpeg)
+![Base de fusta tallada amb fresadora CNC](img/parte_abajo_madera.PNG)
+![Part superior de fusta tallada amb fresadora CNC](img/parte_arriba_madera.PNG)
+![Suport sensors d'ultra sò](img/soporte_ultras.jpeg)
 ![Suport switch bateries](img/soporte_switch.jpeg)
 ![Encaix connector Raspberry PI](img/soporte_cable_raspi.jpeg)
 ## Arquitectura Software
