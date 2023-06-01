@@ -49,9 +49,9 @@ El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar e
 * Suport sensors d'ultra sò
 <img name="Suport sensors d'ultra sò" src="https://github.com/jonaprg/CatEscape/blob/master/img/soporte_ultras.jpeg" width="250" height="250">
 * Suport switch bateries
-<img name="Suport switch bateries" src="https://github.com/jonaprg/CatEscape/blob/master/img/soporte_switch.jpeg" width="250" height="250">
+<img name="Suport switch bateries" src="https://github.com/jonaprg/CatEscape/blob/master/img/soporte_switch.jpeg" width="250" height="300">
 * Encaix connector Raspberry PI
-<img name="Encaix connector Raspberry PI" src="https://github.com/jonaprg/CatEscape/blob/master/img/soporte_cable_raspi.jpeg" width="250" height="250">
+<img name="Encaix connector Raspberry PI" src="https://github.com/jonaprg/CatEscape/blob/master/img/soporte_cable_raspi.jpeg" width="300" height="250">
 
 ## Arquitectura Software
 ![Esquema SW](img/SW.PNG)
