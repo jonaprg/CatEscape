@@ -81,8 +81,6 @@ A continuació es mostren els diferents components que compta el robot acompanya
 
 ## Algorismes
 
-## Experiments realitzats
-
 ## Autors
 * Jose Antonio Ramos Andrades
 * Jonathan Rojas Granda
