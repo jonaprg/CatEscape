@@ -68,6 +68,7 @@ A continuació es mostren els diferents components que compta el robot acompanya
 
 ### Mòduls de Software
 <img src="https://github.com/jonaprg/CatEscape/blob/master/img/DiagramaSoftwareModules.png" width="500" height="250">
+
 * Camera: Aquest mòdul és el responsable de detectar en temps real les diferents imatges que captura la càmera integrada en el robot.
 * Detecció de gat: Un cop detectat el gat aquest mòdul procesara les imatges per detectar si apareix el gat.
 * Raspberry Script:  Aquest mòdul és el que està darrera de la correcta detecció del gat a través de les dades obtingudes amb la càmera. 
