@@ -60,8 +60,23 @@ A continuació es mostren els diferents components que compta el robot acompanya
 
 ## Arquitectura Software
 ![Esquema SW](img/SW.PNG)
+* CatSearch: El robot buscará un gat per la casa fins trobar-lo. Si no troba cap s’aturarà.
+* CatFound: El robot troba un gat i s’apropa cap a ell.
+* FeedCat:  El robot deixa anar una mica de pinso al ser tocat per premiar-lo mentres juga.
+* CatScape: El robot evitará al gat tot atraient la seva atenció amb una pluma o joguina enganxada al robot.
+* AvoidObstacles: El robot tracta de no xocar contra cap obstacle.
+
 ### Mòduls de Software
 <img src="https://github.com/jonaprg/CatEscape/blob/master/img/DiagramaSoftwareModules.png" width="500" height="250">
+* Camera: Aquest mòdul és el responsable de detectar en temps real les diferents imatges que captura la càmera integrada en el robot.
+* Detecció de gat: Un cop detectat el gat aquest mòdul procesara les imatges per detectar si apareix el gat.
+* Raspberry Script:  Aquest mòdul és el que està darrera de la correcta detecció del gat a través de les dades obtingudes amb la càmera. 
+* Escapada: Aquest mòdul és el responsable de quan ha trobat un gat el robot s’escapi d’ell.
+* Sensor capacitiu: Aquest dispositiu és el responsable de quan el gat hagi tocat el sensor el dispensador de pinso obri la comporta.
+* Dispensador pinso: Aquest dispositiu és el responsable de dispensar el pinso del gat, quan el gat hagi tocat el sensor capacitiu 
+* Arduino: Aquest mòdul permet que el robot si troba un obstacle es pari i vagi cap una altre direcció.
+* Navegació robot: Aquest mòdul permet que el robot sigui autònom fins troba un gat.
+* Sensor ultrasonic: Aquest mòdul ens permet saber la distancia obtinguda a través del sensor d’ultrasons connectat a la raspberry. 
 
 ## Algorismes
 
