@@ -60,7 +60,7 @@ El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar e
 ## Arquitectura Software
 ![Esquema SW](img/SW.PNG)
 ### Mòduls de Software
-<img src="https://github.com/jonaprg/CatEscape/blob/master/img/DiagramaSoftwareModules.png" width="700" height="650">
+<img src="https://github.com/jonaprg/CatEscape/blob/master/img/DiagramaSoftwareModules.png" width="700" height="450">
 
 ## Algorismes
 
