@@ -1,6 +1,7 @@
 #include <Servo.h>
 #include <NewPing.h>
 #include <Wire.h>
+#include <CapacitiveSensor.h>
 
 
 #define in1 4
@@ -21,16 +22,22 @@
 #define I2C_SLAVE_ADDRESS 11
 #define PAYLOAD_SIZE 2
 
+#define TOUCHY_PIN A2
+#define COTOUCHY_PIN A3
+#define TOUCH_TOLERANCE 10000
+
 Servo servo;
 NewPing frontSensor(sigFrontTrigg, sigFrontEcho, MAX_DISTANCE);
 NewPing leftSensor(sigLeftTrigg, sigLeftEcho, MAX_DISTANCE);
 NewPing rightSensor(sigRightTrigg, sigRightEcho, MAX_DISTANCE);
 
+CapacitiveSensor touchSensor = CapacitiveSensor(COTOUCHY_PIN, TOUCHY_PIN);
+
 void setup(){
   Serial.begin(9600);
   //Servo configuration
   servo.attach(servoPin);
-  servo.write(60);
+  servo.write(80);
 
   //Ultrasensors configuration
   //pinMode(sigRightTrigg, OUTPUT);
@@ -51,40 +58,23 @@ void setup(){
   Wire.begin(I2C_SLAVE_ADDRESS);
   Serial.println("-------------------------------------I am Slave1");
   delay(1000);               
-  Wire.onRequest(requestEvents);
   Wire.onReceive(receiveEvents);
 }
 
-int n = 0;
-
-void requestEvents()
-{
-  Serial.println(F("---> recieved request"));
-  Serial.print(F("sending value : "));
-  Serial.println(n);
-  Wire.write(n);
-}
+bool catDetected = false;
 
 void receiveEvents(int numBytes)
 {  
-  Serial.println(F("---> recieved events"));
-  Serial.print(numBytes);
-  Serial.println(F("bytes recieved"));
-  Serial.print(F("recieved value : "));
-  Wire.requestFrom(I2C_SLAVE_ADDRESS, 1);    // request 6 bytes from peripheral device #8
-  Serial.print("Wire available");
-  while (Wire.available()) { // peripheral may send less than requested
-    Serial.print("Wire available in");
-    char c = Wire.read(); // receive a byte as character
-    Serial.print(c);         // print the character
-  }
+  Serial.println("Gato detectado");
+  catDetected = true;
 }
 
 void reward(){
-  servo.write(-30);
-  delay(1500);
-  servo.write(60);
-  delay(1500);
+  stop();
+  servo.write(110);
+  delay(1000);
+  servo.write(80);
+  delay(1000);
 }
 
 void goFront()
@@ -142,13 +132,17 @@ void stop(){
   digitalWrite(in4, LOW);
 }
 
-bool catDetected = true;
-
 void loop(){
   delay(100);
   double leftDist = leftSensor.ping_median() / US_ROUNDTRIP_CM;
   double frontDist = frontSensor.ping_median() / US_ROUNDTRIP_CM;
   double rightDist = rightSensor.ping_median() / US_ROUNDTRIP_CM;
+
+  long touchingValue = touchSensor.capacitiveSensor(30);
+  //Serial.print("Value of touching = ");
+  //Serial.println(touchingValue);
+
+  if (touchingValue >= TOUCH_TOLERANCE) reward();  
   
   //Serial.print("Left distance=");
   //Serial.println(leftDist);
@@ -159,11 +153,11 @@ void loop(){
 
   if (catDetected){
     if (leftDist > rightDist){
-      //turnLeft();
-      //turnLeft();
+      turnLeft();
+      turnLeft();
     }else{
-      //turnRight();
-      //turnRight();
+      turnRight();
+      turnRight();
     } 
     catDetected = false;
   }
@@ -171,15 +165,15 @@ void loop(){
   if (frontDist > 0){
     if (frontDist < 30){
       if(frontDist > 20 || leftDist > 20 || rightDist > 20){
-        //goBack();
+        goBack();
       }else{
-        //if (leftDist > rightDist) turnLeft();
-        //else turnRight();
+        if (leftDist > rightDist) turnLeft();
+        else turnRight();
       }
     }else{
-      //goFront();
+      goFront();
     }
   }else{
-    //goFront();
+    goFront();
   }
 }
