@@ -28,6 +28,7 @@ El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar e
 * Fomenta la creativitat: El disseny i la fabricació de CatEscape requereixen habilitats i coneixements tècnics, la qual cosa ens permet fomentar la nostra creativitat i ampliar els nostres coneixements en el desenvolupament d'un robot apte per a mascotes.
 
 ## Esquema maquinari
+A continuació es mostren els diferents components que compta el robot acompanyat del esquema hardware:
 * 3x Sensors de distància/ultrasò.
 * 2x Rodes per moure el robot.
 * 1x Raspberry pi zero.
