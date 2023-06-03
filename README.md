@@ -87,7 +87,7 @@ A continuació es mostren els resultats:
 * Sensor ultrasònic: Aquest mòdul ens permet saber la distància acoonseguida a través del sensor d’ultrasons connectat a la Raspberry. 
 
 ## Algorismes
-
+En la part dels algorismes de Visió per Computador, utilitzem un model de la llibreria opencv anomenat 'haarscascade_frontalcatface_extended.xml' que ens permet accedir a un conjunt de dades sense que nosaltres hàgim d'entrenar un algoritme cada vegada que vulguem utilitzar el robot, un cop carregat el model, per cada frame que captura la càmera buscarem si apareix la cara d'un gat, si això últim es compleix, dibuixarem un quadrat en les coordenades que ens retorna la funció que busca la cara d'aquest. Un cop dibuixat el quadrat enviarem una comanda a l'Arduino notificant que hi ha com a mínim un gat en la imatge i el robot començarà a escapar-se d'ell tenint en compte la part de no xocar-se amb cap obstacle que es trobi pel camí.
 ## Autors
 * Jose Antonio Ramos Andrades
 * Jonathan Rojas Granda
