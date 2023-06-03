@@ -1,5 +1,5 @@
 # CatEscape
-Robot autònom amb 3 rodes que amb 3 sensors de proximitat i una càmera és capaç de detectar un gat i allunyar-se'n sense xocar-se amb els obstacles
+Robot autònom amb 3 rodes que amb 3 sensors de proximitat i una càmera és capaç de detectar un gat i allunyar-se'n sense xocar-se amb els obstacles.
 ## taula de continguts
 * [Descripció](#Descripció)
 * [Requeriments](#Requeriments)
@@ -12,9 +12,9 @@ Robot autònom amb 3 rodes que amb 3 sensors de proximitat i una càmera és cap
 * [Autors](#Autors)
 
 ## Descripció
-La joguina per gats CatEscape buscarà gats a la teva casa per tal de poder entretenir-los mitjançant una càmara i un algoritme de visió per computador. Quan detecti al gat començarà a escspar i a traves d'un plomissol cridarem la seva atenció. Quan consideri que el gat ha tocat el bot un número de vegades suficients o si ha seguit el robot un temps suficient, aquest deixarà anar pinso per tal de premiar al gat
+La joguina per gats CatEscape buscarà gats a la teva casa per tal de poder entretenir-los mitjançant una càmera i un algoritme de visió per computador. Quan detecti al gat començarà a escapar i, a través d'un plomissol o joguina, cridarem la seva atenció. Quan es consideri que el gat ha tocat el bot un número de vegades suficients o si ha seguit el robot un temps suficient, aquest deixarà anar pinso per tal de premiar al gat.
 
-El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar els obstacles que trobi en el seu camí, i amb les rodes podrà girar sense cap problema cap a qualsevol direcció.
+El robot també comptarà amb 3 sensors de proximitat per tal de poder esquivar els obstacles que trobi en el seu camí, i amb les rodes podrà girar sense cap problema cap a qualsevol direcció.
 
 ## Requeriments
 * [Python3.11.x](https://www.python.org)
@@ -24,11 +24,11 @@ El robot també comptara amb 3 sensors de proximitat per tal de poder esquivar e
 * Fomenta la interacció entre propietari i mascota: Jugar amb els gats és una excel·lent manera de desenvolupar i reforçar el llaç entre el propietari i la mascota. CatEscape pot ser una eina per ajudar els propietaris a interactuar amb els seus gats i gaudir de moments divertits junts.
 * Promou l'alimentació saludable: La funció de dispensar aliments de CatEscape pot ser una forma útil per assegurar que els gats rebin la quantitat adequada d'aliment i que mengin més lentament, la qual cosa pot ser beneficiós per a la seva digestió.
 * Serà probablement l'únic del curs que interactua amb un ésser que no és una persona, a la vegada que interactua amb l'entorn.
-* Innovació en joguines per a mascotes: CatEscape és una joguina innovadora que combina diverses funcions en un sol dispositiu, la qual cosa pot ser un avantatge competitiva en el mercat de joguines per a mascotes.
+* Innovació en joguines per a mascotes: CatEscape és una joguina innovadora que combina diverses funcions en un sol dispositiu, la qual cosa pot ser un avantatge competitiu en el mercat de joguines per a mascotes.
 * Fomenta la creativitat: El disseny i la fabricació de CatEscape requereixen habilitats i coneixements tècnics, la qual cosa ens permet fomentar la nostra creativitat i ampliar els nostres coneixements en el desenvolupament d'un robot apte per a mascotes.
 
 ## Esquema maquinari
-A continuació es mostren els diferents components que compta el robot acompanyat del esquema hardware:
+A continuació es mostren els diferents components que compta el robot acompanyat de l'esquema del maquinari:
 * 3x Sensors de distància/ultrasò.
 * 2x Rodes per moure el robot.
 * 1x Raspberry pi zero.
@@ -43,10 +43,15 @@ A continuació es mostren els diferents components que compta el robot acompanya
 <img src="https://github.com/jonaprg/CatEscape/blob/master/img/HW.PNG" width="557" height="300">
 
 ## Peces 3D
-* Base de fusta tallada amb fresadora CNC
+Per la creació del CatEscape, s'han hagut d'imprimir una sèrie de components 3d. Aquestes peces 3d s'han imprès a l'Open Lab de la Universitat Autònoma de Barcelona (UAB).
+S'ha utilitzat el programa [onshape](https://cad.onshape.com/) pel disseny de tots els diversos components i [DevoVision](https://www.3devo.com/devovision/download) per la configuració dels dissenys 3d de la base i la part superior en l'extrusora.
+Les dues primeres peces impreses són les parts principals del robot, ja que formen la base i la part superior del robot per poder suportar els diferents components d'aquest. A la base se li ha retallat dos rectangles de la part lateral per tal que hi puguin cabre les rodes, i quatre orificis per poder subjectar la part d'avall amb la de dalt. En la part superior se li han realitzat dos rectangles, un per encabir el switch activador del robot, i l'altre per tal que hi passi el cable de la cámera cap a la Raspberri. 
+Amb les impressores 3d s'han imprès els tres suports dels sensors d'ultrasò, i els dos rectangles situats a la part superior del robot encarregats de subjectar el switch i de fer passar el cable de la cámera. 
+A continuació es mostren els resultats:
+* Base de fusta tallada amb extrusora 3devo
 <img name="Base de fusta tallada amb fresadora CNC" src="https://github.com/jonaprg/CatEscape/blob/master/img/parte_abajo_madera.PNG" width="250" height="250">
 
-* Part superior de fusta tallada amb fresadora CNC
+* Part superior de fusta tallada amb extrusora 3devo
 <img name="Part superior de fusta tallada amb fresadora CNC" src="https://github.com/jonaprg/CatEscape/blob/master/img/parte_arriba_madera.PNG" width="250" height="250">
 
 * Suport sensors d'ultra sò
@@ -60,24 +65,24 @@ A continuació es mostren els diferents components que compta el robot acompanya
 
 ## Arquitectura Software
 ![Esquema SW](img/SW.PNG)
-* CatSearch: El robot buscará un gat per la casa fins trobar-lo. Si no troba cap s’aturarà.
+* CatSearch: El robot buscará un gat per la casa fins a trobar-lo. Si no troba cap s’aturarà.
 * CatFound: El robot troba un gat i s’apropa cap a ell.
-* FeedCat:  El robot deixa anar una mica de pinso al ser tocat per premiar-lo mentres juga.
-* CatScape: El robot evitará al gat tot atraient la seva atenció amb una pluma o joguina enganxada al robot.
+* FeedCat:  El robot deixa anar una mica de pinso al ser tocat per premiar-lo mentre juga.
+* CatEscape: El robot evitarà el gat i alhora atraurà la seva atenció amb una ploma o joguina enganxada al robot.
 * AvoidObstacles: El robot tracta de no xocar contra cap obstacle.
 
 ### Mòduls de Software
 <img src="https://github.com/jonaprg/CatEscape/blob/master/img/DiagramaSoftwareModules.png" width="500" height="250">
 
 * Camera: Aquest mòdul és el responsable de detectar en temps real les diferents imatges que captura la càmera integrada en el robot.
-* Detecció de gat: Un cop detectat el gat aquest mòdul procesara les imatges per detectar si apareix el gat.
-* Raspberry Script:  Aquest mòdul és el que està darrera de la correcta detecció del gat a través de les dades obtingudes amb la càmera. 
+* Detecció de gat: Un cop detectat el gat aquest mòdul processara les imatges per detectar si apareix el gat.
+* Raspberry Script:  Aquest mòdul és el que està darrere de la correcta detecció del gat a través de les dades obtingudes amb la càmera. 
 * Escapada: Aquest mòdul és el responsable de quan ha trobat un gat el robot s’escapi d’ell.
 * Sensor capacitiu: Aquest dispositiu és el responsable de quan el gat hagi tocat el sensor el dispensador de pinso obri la comporta.
-* Dispensador pinso: Aquest dispositiu és el responsable de dispensar el pinso del gat, quan el gat hagi tocat el sensor capacitiu 
-* Arduino: Aquest mòdul permet que el robot si troba un obstacle es pari i vagi cap una altre direcció.
+* Dispensador pinso: Aquest dispositiu és el responsable de dispensar el pinso del gat, quan el gat hagi tocat el sensor capacitiu. 
+* Arduino: Aquest mòdul permet que el robot si troba un obstacle aturi la seva marxa i vagi cap a una altra direcció.
 * Navegació robot: Aquest mòdul permet que el robot sigui autònom fins troba un gat.
-* Sensor ultrasonic: Aquest mòdul ens permet saber la distancia obtinguda a través del sensor d’ultrasons connectat a la raspberry. 
+* Sensor ultrasònic: Aquest mòdul ens permet saber la distància acoonseguida a través del sensor d’ultrasons connectat a la Raspberry. 
 
 ## Algorismes
 
