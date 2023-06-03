@@ -40,7 +40,7 @@ A continuació es mostren els diferents components que compta el robot acompanya
 * 2x Motor micro metall.
 * 1x Roda de transferència.
 * 1x Placa de proves. 
-
+<img src="https://github.com/jonaprg/CatEscape/blob/master/img/HW.PNG" width="557" height="300">
 ![Esquema HW](img/HW.PNG)
 ## Peces 3D
 * Base de fusta tallada amb fresadora CNC
