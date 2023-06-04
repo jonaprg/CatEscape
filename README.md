@@ -103,13 +103,13 @@ En la part dels algorismes de Visió per Computador, utilitzem un model de la ll
 ## Resultat final
 A continuació es mostren una sèrie d'imatges sobre la versió final del catEscape:
 <em>Vista frontal</em>
-<img align="left" height="420" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeFront.jpeg">
+<img height="420" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeFront.jpeg">
 
 <em>Vista lateral</em>
-<img align="left" height="420" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeSide.jpeg">
+<img  height="420" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeSide.jpeg">
 
 <em>Vista Superior</em>
-<img align="left" height="420" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeTop.jpeg">
+<img height="420" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeTop.jpeg">
 
 ## Autors
 * Jose Antonio Ramos Andrades
