@@ -81,14 +81,16 @@ A continuació es mostren els resultats:
 <img src="https://github.com/jonaprg/CatEscape/blob/master/img/DiagramaSoftwareModules.png" width="500" height="250">
 
 * Camera: Aquest mòdul és el responsable de detectar en temps real les diferents imatges que captura la càmera integrada en el robot.
-* Detecció de gat: Un cop detectat el gat aquest mòdul processara les imatges per detectar si apareix el gat.
-* Raspberry Script:  Aquest mòdul és el que està darrere de la correcta detecció del gat a través de les dades obtingudes amb la càmera. 
+* Mòdul de Detecció de gat: Un cop detectat el gat aquest mòdul processara les imatges per detectar si apareix el gat.
+* Raspberry Zero:  Aquest mòdul és el que està darrere de la correcta detecció del gat a través de les dades obtingudes amb la càmera. 
 * Escapada: Aquest mòdul és el responsable de quan ha trobat un gat el robot s’escapi d’ell.
 * Sensor capacitiu: Aquest dispositiu és el responsable de quan el gat hagi tocat el sensor el dispensador de pinso obri la comporta.
 * Dispensador pinso: Aquest dispositiu és el responsable de dispensar el pinso del gat, quan el gat hagi tocat el sensor capacitiu. 
+* Mòdul de premis: Aques mòdul és el que detecta el gat i dispensa el pinso.
 * Arduino: Aquest mòdul permet que el robot si troba un obstacle aturi la seva marxa i vagi cap a una altra direcció.
 * Navegació robot: Aquest mòdul permet que el robot sigui autònom fins troba un gat.
-* Sensor ultrasònic: Aquest mòdul ens permet saber la distància acoonseguida a través del sensor d’ultrasons connectat a la Raspberry. 
+* Sensor ultrasònic: Aquest mòdul ens permet saber la distància acoonseguida a través del sensor d’ultrasons connectat a la Raspberry.
+* Motors: Aquest dispositiu és el responsable que el robot giri a la dreta, esquerra, o vagi cap endevant depenen dels sensors ultrasonics. 
 
 ## Algorismes
 En la part dels algorismes de Visió per Computador, utilitzem un model de la llibreria opencv anomenat 'haarscascade_frontalcatface_extended.xml' que ens permet accedir a un conjunt de dades sense que nosaltres hàgim d'entrenar un algoritme cada vegada que vulguem utilitzar el robot, un cop carregat el model, per cada frame que captura la càmera buscarem si apareix la cara d'un gat, si això últim es compleix, dibuixarem un quadrat en les coordenades que ens retorna la funció que busca la cara d'aquest. Un cop dibuixat el quadrat enviarem una comanda a l'Arduino notificant que hi ha com a mínim un gat en la imatge i el robot començarà a escapar-se d'ell tenint en compte la part de no xocar-se amb cap obstacle que es trobi pel camí.
