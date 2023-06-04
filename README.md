@@ -10,7 +10,7 @@ Robot autònom amb 3 rodes que amb 3 sensors de proximitat i una càmera és cap
 * [Peces 3D](#Peces_3D)
 * [Arquitectura Programari](#Arquitectura_Programari)
 * [Algorismes](#Algorismes)
-* [Experiments realitzats](#Experiments_realitzats)
+* [Resultat final](#Resultat_final)
 * [Autors](#Autors)
 
 ## Descripció
@@ -99,6 +99,18 @@ En la part dels algorismes de Visió per Computador, utilitzem un model de la ll
 ### Algorisme per evitar obstacles
 
 ### Algorisme per premiar amb pinso
+
+## Resultat final
+A continuació es mostren una sèrie d'imatges sobre la versió final del catEscape:
+<em>Vista frontal</em>
+<img align="left" height="420" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeFront.jpeg">
+
+<em>Vista lateral</em>
+<img align="left" height="420" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeSide.jpeg">
+
+<em>Vista Superior</em>
+<img align="left" height="420" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeTop.jpeg">
+
 ## Autors
 * Jose Antonio Ramos Andrades
 * Jonathan Rojas Granda
