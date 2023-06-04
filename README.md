@@ -1,4 +1,4 @@
-<img align="right" width="320" height="271" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeFront.jpeg">
+<img align="right" width="320" height="300" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeFront.jpeg">
 
 # CatEscape
 Robot autònom amb 3 rodes que amb 3 sensors de proximitat i una càmera és capaç de detectar un gat i allunyar-se'n sense xocar-se amb els obstacles.
