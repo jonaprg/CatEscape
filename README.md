@@ -95,8 +95,3 @@ En la part dels algorismes de Visió per Computador, utilitzem un model de la ll
 * Jonathan Rojas Granda
 * Roger López Puigbò
 * Mohamed El Harrak Aeuil
-
-
-
-
-
