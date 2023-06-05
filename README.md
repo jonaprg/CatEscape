@@ -106,7 +106,7 @@ A continuació es mostren una sèrie d'imatges sobre la versió final del catEsc
 * <em>Vista lateral</em>
 <img  height="420" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeSide.jpeg">
 
-* <em>Vista Superior</em>
+* <em>Vista aèria</em>
 <img height="420" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeTop.jpeg">
 
 ## Autors
