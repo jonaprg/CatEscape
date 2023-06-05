@@ -107,10 +107,10 @@ L'algoritme utilitza un sensor capacitiu per detectar els tocs i un actuador del
 ## Resultat final
 A continuació es mostren una sèrie d'imatges sobre la versió final del catEscape:
 
-* <em>Vista frontal</em>
+* <em>Vista alzada</em>
 <img height="420" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeFront.jpeg">
 
-* <em>Vista lateral</em>
+* <em>Vista perfil</em>
 <img  height="420" src="https://github.com/jonaprg/CatEscape/blob/master/img/catEscapeSide.jpeg">
 
 * <em>Vista aèria</em>
