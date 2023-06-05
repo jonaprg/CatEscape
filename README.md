@@ -14,9 +14,9 @@ Robot autònom amb 3 rodes que amb 3 sensors de proximitat i una càmera és cap
 * [Autors](#Autors)
 
 ## Descripció
-La joguina per gats CatEscape buscarà gats a la teva casa per tal de poder entretenir-los mitjançant una càmera i un algoritme de visió per computador. Quan detecti al gat a través del dispensador deixarà caure un xic de pinso per atreure la seva atenció, i seguidament començara a escapar del gat. I quan es consideri que el gat ha tocat el bot un número de vegades suficients o si ha seguit el robot un temps suficient, aquest deixarà anar pinso per tal de premiar al gat.
+La joguina per gats CatEscape buscarà gats a la teva casa per tal de poder entretenir-los mitjançant una càmera i un algoritme de visió per computador. Quan detecti al gat a través del dispensador deixarà caure un xic de pinso per atreure la seva atenció, i seguidament començara a escapar del gat. I quan es consideri que el gat ha tocat el robot aquest deixarà anar pinso per tal de premiar al gat.
 
-El robot també comptarà amb 3 sensors de proximitat per tal de poder esquivar els obstacles que trobi en el seu camí, i amb les rodes podrà girar sense cap problema cap a qualsevol direcció.
+El robot també compta amb 3 sensors de proximitat per tal de poder esquivar els obstacles que trobi en el seu camí, i amb les rodes pot girar sense cap problema cap a qualsevol direcció.
 
 ## Requeriments
 * [Python3.11.x](https://www.python.org)
@@ -43,7 +43,7 @@ A continuació es mostren els diferents components que compta el robot acompanya
 * 1x Càmera 8 MB Raspberry PI.
 * 2x Motor micro metall.
 * 1x Roda de transferència.
-* 1x Placa de proves. 
+* 1x ProtoBoard. 
 <img src="https://github.com/jonaprg/CatEscape/blob/master/img/HW.PNG" width="557" height="300">
 
 ## Peces 3D
@@ -74,23 +74,22 @@ A continuació es mostren els resultats:
 * CatSearch: El robot buscará un gat per la casa fins a trobar-lo. Si no troba cap s’aturarà.
 * CatFound: El robot troba un gat i s’apropa cap a ell.
 * FeedCat:  El robot deixa anar una mica de pinso al ser tocat per premiar-lo mentre juga.
-* CatEscape: El robot evitarà el gat i alhora atraurà la seva atenció amb una ploma o joguina enganxada al robot.
+* CatEscape: El robot fugirà del gat.
 * AvoidObstacles: El robot tracta de no xocar contra cap obstacle.
 
 ### Mòduls de Software
 <img src="https://github.com/jonaprg/CatEscape/blob/master/img/DiagramaSoftwareModules.png" width="500" height="250">
 
-* Camera: Aquest mòdul és el responsable de detectar en temps real les diferents imatges que captura la càmera integrada en el robot.
-* Mòdul de Detecció de gat: Un cop detectat el gat aquest mòdul processara les imatges per detectar si apareix el gat.
-* Raspberry Zero:  Aquest mòdul és el que està darrere de la correcta detecció del gat a través de les dades obtingudes amb la càmera. 
-* Escapada: Aquest mòdul és el responsable de quan ha trobat un gat el robot s’escapi d’ell.
-* Sensor capacitiu: Aquest dispositiu és el responsable de quan el gat hagi tocat el sensor el dispensador de pinso obri la comporta.
-* Dispensador pinso: Aquest dispositiu és el responsable de dispensar el pinso del gat, quan el gat hagi tocat el sensor capacitiu. 
-* Mòdul de premis: Aques mòdul és el que detecta el gat i dispensa el pinso.
-* Arduino: Aquest mòdul permet que el robot si troba un obstacle aturi la seva marxa i vagi cap a una altra direcció.
-* Navegació robot: Aquest mòdul permet que el robot sigui autònom fins troba un gat.
-* Sensor ultrasònic: Aquest mòdul ens permet saber la distància acoonseguida a través del sensor d’ultrasons connectat a la Raspberry.
-* Motors: Aquest dispositiu és el responsable que el robot giri a la dreta, esquerra, o vagi cap endevant depenen dels sensors ultrasonics. 
+* Càmera: Aquest sensor s’encarrega de fer fotografies que son utilitzades per el mòdul de detecció de gats.
+* Mòdul de Detecció de gat: Un cop es rep una fotografía es comprova si hi ha una cara de gat a la fotografía, si hi ha una es llança una notificació.
+* Raspberry Zero: La raspberry s’encarrega de gestionar tota la operativa del mòdul de detecció de gats, quan se'n detecta un s’envia la notificació a l’arduino fent servir la comunicació I2C.
+* Sensor capacitiu: Aquest sensor és el responsable de detectar quan el gat toca el robot, més concretament la part conductiva del robot.
+* Dispensador pinso: Aquest actuador és el responsable de dispensar el pinso del gat, quan el mòdul de premis consideri necessari.
+* Mòdul de premis: Aquest mòdul s’encarrega de consultar el sensor capacitiu i, si ho considera necessari, premiar al gat fent ús de l’actuador per dispensar pinso.
+* Arduino:  L’Arduino s’encarrega de gestionar la operativa per evitar obstacles, moure motors, dispensar pinso i detectar si el gat el toca
+* Mòdul de navegació: Aquest mòdul permet que el robot sigui autònom per evitar obstacles i anar avançant.
+* Sensor ultrasònic: Aquest sensor ens permet determinar la distància que hi ha als obstacles que el robot té al davant.
+* Motors: Aquest actuador és el responsable que el robot giri a la dreta, esquerra, o vagi cap endavant depenent de les ordres que li arribin del mòdul de navegació.
 
 ## Algorismes
 ### Algorisme de detecció de cares de gats
