@@ -14,13 +14,18 @@ Robot autònom amb 3 rodes que amb 3 sensors de proximitat i una càmera és cap
 * [Autors](#Autors)
 
 ## Descripció
-Descobreix CatScape, la joguina perfecta per als gats domèstics que els proporcionarà hores de diversió i entreteniment! Aquest robot innovador està dissenyat per permetre als gats moure's. Per assegurar-se que els gats no es cansin d'aquesta joguina, CatScape també està equipat amb una funció especial que permet que el robot alliberi una petita porció de pinso quan el gat l'agafa o ha estat jugant amb ell durant un temps. Això manté l'interès del gat en la joguina durant més temps i els dóna una recompensa per a la seva activitat física i mental. No deixis que el teu gat es perdi la diversió i entreteniment que CatScape té per oferir!
+Descobreix CatEscape, la joguina perfecta per als gats domèstics que els proporcionarà hores de diversió i entreteniment! Aquest robot innovador està dissenyat per permetre als gats moure's. Per assegurar-se que els gats no es cansin d'aquesta joguina, CatEscape també està equipat amb una funció especial que permet que el robot alliberi una petita porció de pinso quan el gat l'agafa o ha estat jugant amb ell durant un temps. Això manté l'interès del gat en la joguina durant més temps i els dóna una recompensa per a la seva activitat física i mental. No deixis que el teu gat es perdi la diversió i entreteniment que CatEscape té per oferir!
 
 ## Requeriments
+### Raspberry (Python)
 * [Python3.11.x](https://www.python.org)
 * [Opencv](https://opencv.org/) 
 * [smbus2](https://pypi.org/project/smbus2/)
-
+### Arduino (C++)
+* [Servo.h] Natiu amb Arduino
+* [NewPing.h](https://reference.arduino.cc/reference/en/language/functions/communication/wire/)
+* [Wire.h](https://reference.arduino.cc/reference/en/libraries/newping/)
+* [CapacitiveSensor.h](https://www.arduinolibraries.info/libraries/capacitive-sensor)
 ## Contribucions sorprenents
 * Proporciona entreteniment i activitat física: Els gats són animals actius per naturalesa i necessiten estimulació i exercici per mantenir-se sans i feliços.        CatEscape proporciona una forma divertida i emocionant per als gats de jugar i mantenir-se actius, la qual cosa pot millorar el seu benestar general.
 * Fomenta la interacció entre propietari i mascota: Jugar amb els gats és una excel·lent manera de desenvolupar i reforçar el llaç entre el propietari i la mascota. CatEscape pot ser una eina per ajudar els propietaris a interactuar amb els seus gats i gaudir de moments divertits junts.
